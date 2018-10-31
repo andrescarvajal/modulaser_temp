@@ -20,7 +20,7 @@ public class estanteriaCanastillas {
             precio_total_bota_cuadrada, precio_total_tapon_cuadrado, precio_total_estanteria;
 
     private String cant_cuadro_ext_est_1, cant_cuadro_ext_est_2, cant_cuadro_ext_est_3,
-        cant_cuadro_ext_est_4, cant_cuadro_ext_est_5, cant_travesano_ext_mod;
+            cant_cuadro_ext_est_4, cant_cuadro_ext_est_5, cant_travesano_ext_mod;
 
     private String cant_canastilla_13_perf, cant_canastilla_13_cerr,
             cant_canastilla_18_perf, cant_canastilla_18_cerr,
@@ -287,13 +287,15 @@ public class estanteriaCanastillas {
         }
     }
 
+    /* Todos los calculos estan hechos en unidades */
+
     public void calcularCantidades(Boolean acero_inoxidable, Boolean costado){
         this.cant_parales =
-                (Integer.valueOf(this.cuerpos) + 1) * Integer.valueOf(this.modulos) ;
+                (Integer.valueOf(this.cuerpos) + 1) * Integer.valueOf(this.modulos) * 2;
         this.cant_cuadroU =
-                Float.valueOf(this.cuadroU) *  Float.valueOf(this.cuerpos) * Float.valueOf(this.modulos) / 2;
+                Float.valueOf(this.cuadroU) *  Float.valueOf(this.cuerpos) * Float.valueOf(this.modulos);
         this.cant_travesanos =
-                (Integer.valueOf(this.posiciones) - Integer.valueOf(this.cuadroU)) * Integer.valueOf(this.cuerpos) * Integer.valueOf(this.modulos);
+                (Integer.valueOf(this.posiciones) - Integer.valueOf(this.cuadroU)) * Integer.valueOf(this.cuerpos) * Integer.valueOf(this.modulos) * 2;
         this.cant_tornillos_40 =
                 6 * Integer.valueOf(this.posiciones) * Integer.valueOf(this.modulos) ;
         this.cant_tornillos_60 =
@@ -409,20 +411,20 @@ public class estanteriaCanastillas {
 
         this.precio_total_estanteria = Integer.toString(
                 Integer.valueOf(this.precio_total_parales) + Integer.valueOf(this.precio_total_cuadroU) +
-                Integer.valueOf(this.precio_total_travesanos) + Integer.valueOf(this.precio_total_tornillos_40) +
-                Integer.valueOf(this.precio_total_tornillos_60) + Integer.valueOf(this.precio_total_tuerca_lujo) +
-                Integer.valueOf(this.precio_total_tapon_cuadrado) + Integer.valueOf(this.precio_total_bota_cuadrada) +
+                        Integer.valueOf(this.precio_total_travesanos) + Integer.valueOf(this.precio_total_tornillos_40) +
+                        Integer.valueOf(this.precio_total_tornillos_60) + Integer.valueOf(this.precio_total_tuerca_lujo) +
+                        Integer.valueOf(this.precio_total_tapon_cuadrado) + Integer.valueOf(this.precio_total_bota_cuadrada) +
 
-                this.precio_total_cuadro_ext_est_1 + this.precio_total_cuadro_ext_est_2 +
-                this.precio_total_cuadro_ext_est_3 + this.precio_total_cuadro_ext_est_4 +
-                this.precio_total_cuadro_ext_est_5 + this.precio_total_travesano_ext_mod +
+                        this.precio_total_cuadro_ext_est_1 + this.precio_total_cuadro_ext_est_2 +
+                        this.precio_total_cuadro_ext_est_3 + this.precio_total_cuadro_ext_est_4 +
+                        this.precio_total_cuadro_ext_est_5 + this.precio_total_travesano_ext_mod +
 
-                this.precio_total_canastilla_13_perf + this.precio_total_canastilla_13_cerr +
-                this.precio_total_canastilla_18_perf + this.precio_total_canastilla_18_cerr +
-                this.precio_total_canastilla_25_perf + this.precio_total_canastilla_25_cerr +
-                this.precio_total_canastilla_33_perf + this.precio_total_canastilla_33_cerr +
-                this.precio_total_canastilla_41_perf + this.precio_total_canastilla_41_cerr +
-                this.precio_total_tapa_normatizada
+                        this.precio_total_canastilla_13_perf + this.precio_total_canastilla_13_cerr +
+                        this.precio_total_canastilla_18_perf + this.precio_total_canastilla_18_cerr +
+                        this.precio_total_canastilla_25_perf + this.precio_total_canastilla_25_cerr +
+                        this.precio_total_canastilla_33_perf + this.precio_total_canastilla_33_cerr +
+                        this.precio_total_canastilla_41_perf + this.precio_total_canastilla_41_cerr +
+                        this.precio_total_tapa_normatizada
         );
     }
 

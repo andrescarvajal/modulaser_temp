@@ -21,7 +21,7 @@ public class estanteriaCarga {
 
     //declaración de constructor
     public estanteriaCarga(String altura, String cuerpos, String niveles, String cuadro,
-                                 String modulos, String fondo, Boolean aceroInoxidable) {
+                           String modulos, String fondo, Boolean aceroInoxidable) {
         this.altura = altura;
         this.cuerpos = cuerpos;
         this.niveles = niveles;
@@ -152,23 +152,25 @@ public class estanteriaCarga {
         }
     }
 
+    /* Todos los calculos estan hechos en unidades */
+
     public void calcularCantidades(Boolean acero_inoxidable){
         this.cant_parales =
-                (Integer.valueOf(this.cuerpos) + 1) * Integer.valueOf(this.modulos) +
-                (Integer.valueOf(this.cuerpos) + 1) * Integer.valueOf(this.modulos) * (Integer.valueOf(this.fondo) - 1) / 2;
+                (Integer.valueOf(this.cuerpos) + 1) * Integer.valueOf(this.modulos) * 2 +
+                        (Integer.valueOf(this.cuerpos) + 1) * Integer.valueOf(this.modulos) * (Integer.valueOf(this.fondo) - 1);
         this.cant_cuadro =
                 Integer.valueOf(this.niveles) *  Integer.valueOf(this.cuerpos) *
-                Integer.valueOf(this.modulos) * Integer.valueOf(this.fondo);
+                        Integer.valueOf(this.modulos) * Integer.valueOf(this.fondo);
         this.cant_tornillos_60 =
                 8 * Integer.valueOf(this.niveles) * Integer.valueOf(this.modulos) *  Integer.valueOf(this.fondo) ;
         this.cant_tornillos_80 =
                 4 * Integer.valueOf(this.niveles) * (Integer.valueOf(this.cuerpos) - 1) *
-                Integer.valueOf(this.modulos) *  Integer.valueOf(this.fondo);
+                        Integer.valueOf(this.modulos) *  Integer.valueOf(this.fondo);
         this.cant_tuerca_lujo =
                 Integer.valueOf(this.cant_tornillos_60) + Integer.valueOf(this.cant_tornillos_80);
         this. cant_tapon_rectangular =
                 4 * (Integer.valueOf(this.cuerpos) + 1) * Integer.valueOf(this.modulos) +
-                2 * (Integer.valueOf(this.cuerpos) + 1) * Integer.valueOf(this.modulos) * (Integer.valueOf(this.fondo) - 1);
+                        2 * (Integer.valueOf(this.cuerpos) + 1) * Integer.valueOf(this.modulos) * (Integer.valueOf(this.fondo) - 1);
 
         /* No es necesario calcular las cantidades de algunos elementos pues ya estas son dadas
          * directamente. Por lo tanto se calcula directo el precio total
