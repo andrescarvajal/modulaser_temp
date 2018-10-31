@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_calcular_estanteria_canastillas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+
+        tools:context="com.example.andres.formacajas.CalcularEstanteriaCanastillas">
+
+        <!-- ========================================================
+    ================= Selección de Estructura  ==================
+    ========================================================= -->
+
+        <!-- Titulo -->
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/titulo_canastillas"
+            android:textSize="@dimen/size_titulos_secciones_variable"></TextView>
+
+        <!-- Ingreso Altura -->
+
+        <TextView
+            android:id="@+id/textoAltura"
+            android:layout_width="@dimen/size_text_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titulo"
+            android:layout_marginTop="16dp"
+            android:text="@string/string_line_1"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <Button
+            android:id="@+id/menosAltura"
+            android:layout_width="@dimen/size_button_variable"
+            android:layout_height="@dimen/size_button_variable"
+            android:layout_below="@+id/titulo"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/textoAltura"
+            android:layout_toRightOf="@+id/textoAltura"
+            android:padding="0dp"
+            android:text="@string/string_boton_menos"
+            android:textSize="@dimen/size_text_button_variable"></Button>
+
+        <TextView
+            android:id="@+id/textoAlturaSelec"
+            android:layout_width="@dimen/size_value_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titulo"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/menosAltura"
+            android:layout_toRightOf="@+id/menosAltura"
+            android:gravity="center_vertical"
+            android:text="@string/default_altura"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <Button
+            android:id="@+id/masAltura"
+            android:layout_width="@dimen/size_button_variable"
+            android:layout_height="@dimen/size_button_variable"
+            android:layout_below="@+id/titulo"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/textoAlturaSelec"
+            android:gravity="center_horizontal|center"
+            android:padding="0dp"
+            android:text="@string/string_boton_mas"
+            android:textSize="@dimen/size_text_button_variable"></Button>
+
+        <!-- Ingreso Cuerpos -->
+
+        <TextView
+            android:id="@+id/textoCuerpos"
+            android:layout_width="@dimen/size_text_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textoAltura"
+            android:gravity="center_vertical"
+            android:text="@string/string_line_2"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <Button
+            android:id="@+id/menosCuerpos"
+            android:layout_width="@dimen/size_button_variable"
+            android:layout_height="@dimen/size_button_variable"
+            android:layout_below="@+id/textoAltura"
+            android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@+id/textoCuerpos"
+            android:layout_toRightOf="@+id/textoCuerpos"
+            android:padding="0dp"
+            android:text="@string/string_boton_menos"
+            android:textSize="@dimen/size_text_button_variable"></Button>
+
+        <TextView
+            android:id="@+id/textoCuerposSelec"
+            android:layout_width="@dimen/size_value_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textoAlturaSelec"
+            android:layout_toEndOf="@+id/menosCuerpos"
+            android:layout_toRightOf="@+id/menosCuerpos"
+            android:gravity="center_vertical"
+            android:text="@string/default_cuerpos"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <Button
+            android:id="@+id/masCuerpos"
+            android:layout_width="@dimen/size_button_variable"
+            android:layout_height="@dimen/size_button_variable"
+            android:layout_below="@+id/textoAltura"
+            android:layout_toEndOf="@+id/textoCuerposSelec"
+            android:layout_toRightOf="@+id/textoCuerposSelec"
+            android:padding="0dp"
+            android:text="@string/string_boton_mas"
+            android:textSize="@dimen/size_text_button_variable"></Button>
+
+        <!-- Ingreso Posiciones -->
+
+        <TextView
+            android:id="@+id/textoPosiciones"
+            android:layout_width="@dimen/size_text_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textoCuerpos"
+            android:text="@string/string_line_3"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <Button
+            android:id="@+id/menosPosiciones"
+            android:layout_width="@dimen/size_button_variable"
+            android:layout_height="@dimen/size_button_variable"
+            android:layout_below="@+id/textoCuerpos"
+            android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@+id/textoPosiciones"
+            android:layout_toRightOf="@+id/textoPosiciones"
+            android:padding="0dp"
+            android:text="@string/string_boton_menos"
+            android:textSize="@dimen/size_text_button_variable"></Button>
+
+        <TextView
+            android:id="@+id/textoPosicionesSelec"
+            android:layout_width="@dimen/size_value_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textoCuerpos"
+            android:layout_toRightOf="@+id/menosPosiciones"
+            android:text="@string/default_posiciones"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <Button
+            android:id="@+id/masPosiciones"
+            android:layout_width="@dimen/size_button_variable"
+            android:layout_height="@dimen/size_button_variable"
+            android:layout_below="@+id/textoCuerpos"
+            android:layout_toRightOf="@+id/textoPosicionesSelec"
+            android:padding="0dp"
+            android:text="@string/string_boton_mas"
+            android:textSize="@dimen/size_text_button_variable"></Button>
+
+        <!-- Ingreso Cuadro U -->
+
+        <TextView
+            android:id="@+id/textoCuadroU"
+            android:layout_width="@dimen/size_text_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textoPosiciones"
+            android:text="@string/string_line_4"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <Button
+            android:id="@+id/menosCuadroU"
+            android:layout_width="@dimen/size_button_variable"
+            android:layout_height="@dimen/size_button_variable"
+            android:layout_below="@+id/textoPosiciones"
+            android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@+id/textoCuadroU"
+            android:layout_toRightOf="@+id/textoCuadroU"
+            android:padding="0dp"
+            android:text="@string/string_boton_menos"
+            android:textSize="@dimen/size_text_button_variable"></Button>
+
+        <TextView
+            android:id="@+id/textoCuadroUSelec"
+            android:layout_width="@dimen/size_value_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textoPosiciones"
+            android:layout_toRightOf="@+id/menosCuadroU"
+            android:text="@string/default_cuadro_u"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <Button
+            android:id="@+id/masCuadroU"
+            android:layout_width="@dimen/size_button_variable"
+            android:layout_height="@dimen/size_button_variable"
+            android:layout_below="@+id/textoPosiciones"
+            android:layout_toRightOf="@+id/textoCuadroUSelec"
+            android:padding="0dp"
+            android:text="@string/string_boton_mas"
+            android:textSize="@dimen/size_text_button_variable"></Button>
+
+        <!-- Ingreso Módulos -->
+
+        <TextView
+            android:id="@+id/textoModulos"
+            android:layout_width="@dimen/size_text_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textoCuadroU"
+            android:text="@string/string_line_5"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <Button
+            android:id="@+id/menosModulos"
+            android:layout_width="@dimen/size_button_variable"
+            android:layout_height="@dimen/size_button_variable"
+            android:layout_below="@+id/textoCuadroU"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/textoModulos"
+            android:padding="0dp"
+            android:text="@string/string_boton_menos"
+            android:textSize="@dimen/size_text_button_variable"></Button>
+
+        <TextView
+            android:id="@+id/textoModulosSelec"
+            android:layout_width="@dimen/size_value_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textoCuadroU"
+            android:layout_toRightOf="@+id/menosModulos"
+            android:text="@string/default_modulos"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <Button
+            android:id="@+id/masModulos"
+            android:layout_width="@dimen/size_button_variable"
+            android:layout_height="@dimen/size_button_variable"
+            android:layout_below="@+id/textoCuadroU"
+            android:layout_toRightOf="@+id/textoModulosSelec"
+            android:padding="0dp"
+            android:text="@string/string_boton_mas"
+            android:textSize="@dimen/size_text_button_variable"></Button>
+
+        <!-- ========================================================
+    ================= Seleccion de accesorios  ==================
+    ========================================================= -->
+
+        <!-- Titulo  -->
+
+        <TextView
+            android:id="@+id/tituloSeccionAccesorios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textoModulos"
+            android:layout_marginTop="16dp"
+            android:text="@string/titulo_seleccion_accesorios"
+            android:textSize="@dimen/size_titulos_secciones_variable"></TextView>
+
+        <!-- Cuadro ext. est. m. de 1 -->
+
+        <TextView
+            android:id="@+id/cuadroExtEst1"
+            android:layout_width="@dimen/size_accessorio_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tituloSeccionAccesorios"
+            android:layout_marginTop="16dp"
+            android:text="@string/cuadro_ext_est_1"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <EditText
+            android:id="@+id/cuadroExtEst1Selec"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tituloSeccionAccesorios"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/menosModulos"
+            android:background="@null"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable" />
+
+        <!-- Cuadro ext. est. m. de 2 -->
+
+        <TextView
+            android:id="@+id/cuadroExtEst2"
+            android:layout_width="@dimen/size_accessorio_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cuadroExtEst1"
+            android:text="@string/cuadro_ext_est_2"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <EditText
+            android:id="@+id/cuadroExtEst2Selec"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cuadroExtEst1"
+            android:layout_toRightOf="@+id/menosModulos"
+            android:background="@null"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable" />
+
+        <!-- Cuadro ext. est. m. de 3 -->
+
+        <TextView
+            android:id="@+id/cuadroExtEst3"
+            android:layout_width="@dimen/size_accessorio_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cuadroExtEst2"
+            android:text="@string/cuadro_ext_est_3"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <EditText
+            android:id="@+id/cuadroExtEst3Selec"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cuadroExtEst2"
+            android:layout_toRightOf="@+id/menosModulos"
+            android:background="@null"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable" />
+
+        <!-- Cuadro ext. est. m. de 4 -->
+
+        <TextView
+            android:id="@+id/cuadroExtEst4"
+            android:layout_width="@dimen/size_accessorio_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cuadroExtEst3"
+            android:text="@string/cuadro_ext_est_4"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <EditText
+            android:id="@+id/cuadroExtEst4Selec"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cuadroExtEst3"
+            android:layout_toRightOf="@+id/menosModulos"
+            android:background="@null"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable" />
+
+        <!-- Cuadro ext. est. m. de 5 -->
+
+        <TextView
+            android:id="@+id/cuadroExtEst5"
+            android:layout_width="@dimen/size_accessorio_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cuadroExtEst4"
+            android:text="@string/cuadro_ext_est_5"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <EditText
+            android:id="@+id/cuadroExtEst5Selec"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cuadroExtEst4"
+            android:layout_toRightOf="@+id/menosModulos"
+            android:background="@null"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable" />
+
+        <!-- Travesaño extensión modular -->
+
+        <TextView
+            android:id="@+id/travesanoEtxModular"
+            android:layout_width="@dimen/size_accessorio_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cuadroExtEst5"
+            android:text="@string/travesano_ext_modular"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <EditText
+            android:id="@+id/travesanoEtxModularSelec"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cuadroExtEst5"
+            android:layout_toRightOf="@+id/menosModulos"
+            android:background="@null"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable" />
+
+        <!-- ========================================================
+    ================= Seleccion de canastillas  =================
+    ========================================================= -->
+
+        <!-- Titulo  -->
+
+        <TextView
+            android:id="@+id/tituloSeccionCanastillas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/travesanoEtxModular"
+            android:layout_marginTop="16dp"
+            android:text="@string/titulo_seleccion_canastillas"
+            android:textSize="@dimen/size_titulos_secciones_variable"></TextView>
+
+        <!-- Canastillas de 13 cm perforada -->
+
+        <TextView
+            android:id="@+id/canastillas13Perforada"
+            android:layout_width="@dimen/size_accessorio_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tituloSeccionCanastillas"
+            android:layout_marginTop="16dp"
+            android:text="@string/canastillas_13_perforada"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <EditText
+            android:id="@+id/canastillas13PerforadaSelec"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tituloSeccionCanastillas"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/menosModulos"
+            android:background="@null"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable" />
+
+        <!-- Canastillas de 13 cm cerrada -->
+
+        <TextView
+            android:id="@+id/canastillas13Cerrada"
+            android:layout_width="@dimen/size_accessorio_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas13Perforada"
+            android:text="@string/canastillas_13_cerrada"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <EditText
+            android:id="@+id/canastillas13CerradaSelec"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas13Perforada"
+            android:layout_toRightOf="@+id/menosModulos"
+            android:background="@null"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable" />
+
+        <!-- Canastillas de 18 cm perforada -->
+
+        <TextView
+            android:id="@+id/canastillas18Perforada"
+            android:layout_width="@dimen/size_accessorio_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas13Cerrada"
+            android:text="@string/canastillas_18_perforada"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <EditText
+            android:id="@+id/canastillas18PerforadaSelec"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas13Cerrada"
+            android:layout_toRightOf="@+id/menosModulos"
+            android:background="@null"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable" />
+
+        <!-- Canastillas de 18 cm cerrada -->
+
+        <TextView
+            android:id="@+id/canastillas18Cerrada"
+            android:layout_width="@dimen/size_accessorio_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas18Perforada"
+            android:text="@string/canastillas_18_cerrada"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <EditText
+            android:id="@+id/canastillas18CerradaSelec"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas18Perforada"
+            android:layout_toRightOf="@+id/menosModulos"
+            android:background="@null"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable" />
+
+        <!-- Canastillas de 25 cm perforada -->
+
+        <TextView
+            android:id="@+id/canastillas25Perforada"
+            android:layout_width="@dimen/size_accessorio_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas18Cerrada"
+            android:text="@string/canastillas_25_perforada"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <EditText
+            android:id="@+id/canastillas25PerforadaSelec"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas18Cerrada"
+            android:layout_toRightOf="@+id/menosModulos"
+            android:background="@null"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable" />
+
+        <!-- Canastillas de 25 cm cerrada -->
+
+        <TextView
+            android:id="@+id/canastillas25Cerrada"
+            android:layout_width="@dimen/size_accessorio_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas25Perforada"
+            android:text="@string/canastillas_25_cerrada"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <EditText
+            android:id="@+id/canastillas25CerradaSelec"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas25Perforada"
+            android:layout_toRightOf="@+id/menosModulos"
+            android:background="@null"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable" />
+
+        <!-- Canastillas de 33 cm perforada -->
+
+        <TextView
+            android:id="@+id/canastillas33Perforada"
+            android:layout_width="@dimen/size_accessorio_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas25Cerrada"
+            android:text="@string/canastillas_33_perforada"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <EditText
+            android:id="@+id/canastillas33PerforadaSelec"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas25Cerrada"
+            android:layout_toRightOf="@+id/menosModulos"
+            android:background="@null"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable" />
+
+        <!-- Canastillas de 33 cm cerrada -->
+
+        <TextView
+            android:id="@+id/canastillas33Cerrada"
+            android:layout_width="@dimen/size_accessorio_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas33Perforada"
+            android:text="@string/canastillas_33_cerrada"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <EditText
+            android:id="@+id/canastillas33CerradaSelec"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas33Perforada"
+            android:layout_toRightOf="@+id/menosModulos"
+            android:background="@null"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable" />
+
+        <!-- Canastillas de 41 cm perforada -->
+
+        <TextView
+            android:id="@+id/canastillas41Perforada"
+            android:layout_width="@dimen/size_accessorio_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas33Cerrada"
+            android:text="@string/canastillas_41_perforada"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <EditText
+            android:id="@+id/canastillas41PerforadaSelec"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas33Cerrada"
+            android:layout_toRightOf="@+id/menosModulos"
+            android:background="@null"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable" />
+
+        <!-- Canastillas de 41 cm cerrada -->
+
+        <TextView
+            android:id="@+id/canastillas41Cerrada"
+            android:layout_width="@dimen/size_accessorio_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas41Perforada"
+            android:text="@string/canastillas_41_cerrada"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <EditText
+            android:id="@+id/canastillas41CerradaSelec"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas41Perforada"
+            android:layout_toRightOf="@+id/menosModulos"
+            android:background="@null"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable" />
+
+        <!-- Tapa normalizada -->
+
+        <TextView
+            android:id="@+id/tapaNormalizada"
+            android:layout_width="@dimen/size_accessorio_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas41Cerrada"
+            android:text="@string/tapa_normatizada"
+            android:textSize="@dimen/size_text_variable"></TextView>
+
+        <EditText
+            android:id="@+id/tapaNormalizadaSelec"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canastillas41Cerrada"
+            android:layout_toRightOf="@+id/menosModulos"
+            android:background="@null"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_variable" />
+
+        <!-- ========================================================
+    ================== Seleccion de Checkboxes  =================
+    ========================================================= -->
+
+        <!-- Acero Inoxidable -->
+
+        <CheckBox
+            android:id="@+id/checkBoxAceroInoxidable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tapaNormalizada"
+            android:layout_marginTop="16dp"
+            android:text="@string/check_box_acero_inoxidable"
+            android:textSize="@dimen/size_text_variable" />
+
+        <!-- Costado -->
+
+        <CheckBox
+            android:id="@+id/checkBoxCostado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkBoxAceroInoxidable"
+            android:text="@string/check_box_costado"
+            android:textSize="@dimen/size_text_variable" />
+
+        <!-- ========================================================
+    ================== Seleccion de Resultados  =================
+    ========================================================= -->
+
+        <!-- Boton Calcular -->
+
+        <Button
+            android:id="@+id/calcularEstCanastillas"
+            android:layout_width="@dimen/size_button_calcular_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkBoxCostado"
+            android:layout_centerInParent="false"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/string_boton_calcular__est_canastillas"
+            android:textAllCaps="false"
+            android:textSize="@dimen/size_text_variable"></Button>
+
+        <!-- Resultado del calculo -->
+
+        <TextView
+            android:id="@+id/textoResultado"
+            android:layout_width="@dimen/size_text_resultado_layout_variable"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calcularEstCanastillas"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="@string/default_resultado"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_text_resultado_variable"></TextView>
+
+    </RelativeLayout>
+
+</ScrollView>

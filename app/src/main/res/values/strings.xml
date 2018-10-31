@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">prodalca modulaser</string>
+
+<string name="titulo_canastillas">Calculo estantería canastillas</string>
+
+<string name="string_line_1">Altura</string>
+<string name="string_line_2">Cuerpos</string>
+<string name="string_line_3">Posiciones</string>
+<string name="string_line_4">Cuadro U</string>
+<string name="string_line_5">Módulos</string>
+
+<string name="default_altura">1.94</string>
+<string name="default_cuerpos">1</string>
+<string name="default_posiciones">4</string>
+<string name="default_cuadro_u">3</string>
+<string name="default_modulos">1</string>
+<string name="default_resultado">-</string>
+
+<string name="check_box_acero_inoxidable">Acero inoxidable</string>
+<string name="check_box_costado">Costado</string>
+
+<string name="string_boton_mas">+</string>
+<string name="string_boton_menos">-</string>
+<string name="string_boton_calcular__est_canastillas">Calcular</string>
+
+<string name="titulo_seleccion_accesorios">Seleccione entre los accesorios</string>
+<string name="cuadro_ext_est_1">Cuadro ext. 1</string>
+<string name="cuadro_ext_est_2">Cuadro ext. 2</string>
+<string name="cuadro_ext_est_3">Cuadro ext. 3</string>
+<string name="cuadro_ext_est_4">Cuadro ext. 4</string>
+<string name="cuadro_ext_est_5">Cuadro ext. 5</string>
+<string name="travesano_ext_modular">Trav. ext. mod.</string>
+
+<string name="titulo_seleccion_canastillas">Seleccione la cantidad de canastillas</string>
+<string name="canastillas_13_perforada">Perforada 13 cm</string>
+<string name="canastillas_13_cerrada">Cerrada 13 cm</string>
+<string name="canastillas_18_perforada">Perforada 18 cm</string>
+<string name="canastillas_18_cerrada">Cerrada 18 cm</string>
+<string name="canastillas_25_perforada">Perforada 25 cm</string>
+<string name="canastillas_25_cerrada">Cerrada 25 cm</string>
+<string name="canastillas_33_perforada">Perforada 33 cm</string>
+<string name="canastillas_33_cerrada">Cerrada 33 cm</string>
+<string name="canastillas_41_perforada">Perforada 41 cm</string>
+<string name="canastillas_41_cerrada">Cerrada 41 cm</string>
+<string name="tapa_normatizada">Tapa normatizada</string>
+
+
+<string name="titulo_carga">Calculo estantería carga</string>
+
+<string name="niveles">Niveles</string>
+<string name="cuadro">Cuadro</string>
+<string name="fondo">Fondo</string>
+
+<string name="default_altura_carga">1.94</string>
+<string name="default_cuerpos_carga">1</string>
+<string name="default_niveles_carga">2</string>
+<string name="default_cuadro_carga">40x90</string>
+<string name="default_modulos_carga">1</string>
+<string name="default_fondo_carga">1</string>
+
+</resources>

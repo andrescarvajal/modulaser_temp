@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- Default screen margins, per the Android Design guidelines. -->
+<dimen name="activity_horizontal_margin">16dp</dimen>
+<dimen name="activity_vertical_margin">16dp</dimen>
+
+<!-- La siguiente es una version "hard-code" para ajustar un poco la aplicacion al tamaño
+     de la pantalla del dispositivo. Se comenta una de las siguientes posibilidades y se
+     deja sin comentar la que se quiere programar en el dispositivo. La solucion tecnica
+     deberia se usando diferentes layouts para los diferentes tipos de pantalla. -->
+
+<!-- Tamaño para celulares medianos -->
+
+<dimen name="size_text_variable">22sp</dimen> <!-- Tamaño del texto de los parametros ingresados por el usuario y su valor -->
+<dimen name="size_text_layout_variable">150dp</dimen> <!-- Tamaño del layout donde esta este texto -->
+
+<dimen name="size_value_layout_variable">60dp</dimen> <!-- Tamaño del valor del parametro (canastillas) -->
+<dimen name="size_value_layout_variable_carga">90dp</dimen> <!-- Tamaño del valor del parametro (carga) -->
+
+<dimen name="size_accessorio_layout_variable">180dp</dimen> <!-- Tamaño del valor del layout accesorio -->
+
+<dimen name="size_button_variable">27dp</dimen> <!-- tamaño del boton aumentar (+) o disminuir (-) -->
+<dimen name="size_text_button_variable">15sp</dimen> <!-- tamaño del texto en el boton aumentar (+) o disminuir (-) -->
+
+<dimen name="size_button_calcular_variable">250dp</dimen>   <!-- tamaño del boton calcular -->
+<dimen name="size_text_button_calcular_variable">17sp</dimen>  <!-- SIN USAR!!!! ??? -->
+
+<dimen name="size_text_resultado_variable">24sp</dimen>    <!-- tamaño del texto de resultado -->
+<dimen name="size_text_resultado_layout_variable">250dp</dimen> <!-- tamaño del layout de resultado -->
+
+<dimen name="size_titulos_secciones_variable">24sp</dimen> <!-- Titulos texto -->
+
+
+
+<!-- Tamaño para una tablet -->
+
+<!--
+
+<dimen name="size_text_variable">12pt</dimen>
+<dimen name="size_text_layout_variable">150dp</dimen>
+<dimen name="size_value_layout_variable">80dp</dimen>
+<dimen name="size_value_layout_variable_carga">80dp</dimen>
+
+<dimen name="size_accessorio_layout_variable">500dp</dimen>
+
+<dimen name="size_button_variable">40dp</dimen>
+<dimen name="size_text_button_variable">12pt</dimen>
+
+<dimen name="size_button_calcular_variable">400dp</dimen>
+<dimen name="size_text_button_calcular_variable">16pt</dimen>
+
+<dimen name="size_text_resultado_variable">400dp</dimen>
+<dimen name="size_text_resultado_layout_variable">20pt</dimen>
+
+<dimen name="size_titulos_secciones_variable">11pt</dimen>
+
+-->
+
+</resources>
+
